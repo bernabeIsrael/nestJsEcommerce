@@ -1,9 +1,9 @@
 import {
-  IsNotEmpty,
-  IsNumber,
-  IsPositive,
   IsString,
+  IsNumber,
   IsUrl,
+  IsNotEmpty,
+  IsPositive,
 } from 'class-validator';
 import { PartialType } from '@nestjs/mapped-types';
 
@@ -23,7 +23,6 @@ export class CreateProductDto {
 
   @IsNumber()
   @IsNotEmpty()
-  @IsPositive()
   readonly stock: number;
 
   @IsUrl()
