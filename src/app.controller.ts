@@ -18,4 +18,9 @@ export class AppController {
   ) {
     return `${id} and ${lastKey}, ${ordera}`;
   }
+
+  @Get('tasks')
+  tasks() {
+    return this.appService.getTasks();
+  }
 }
